@@ -10,6 +10,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 
 root = tk.Tk()
 root.geometry("900x700+100+100")
+root.configure(background="gray")
 def d2():
 	os.system('python objdet1.py')
 	b = tk.Label(root, text ="starting machine")
@@ -38,26 +39,31 @@ def d1():
 	b.place(x=400,y=300)
 	w=tk.Label(root,text="stopping if error")
 	w.place(x=400,y=350)
+def v():
+	os.system('python videodet.py')
 def d():
+
 	button = tk.Button(root, text='Western', width=25,command=d1)
-	button.place(x=400,y=100)
+	button.place(x=350,y=100)
 
 	button = tk.Button(root, text='Northern', width=25,command= d2)
-	button.place(x=400,y=130)
+	button.place(x=350,y=130)
 	
 	button = tk.Button(root, text='southern', width=25,command=d3)
-	button.place(x=400,y=160)
+	button.place(x=350,y=160)
 
 	button = tk.Button(root, text='northern', width=25,command= d4)
-	button.place(x=400,y=190)
+	button.place(x=350,y=190)
 
 
 def b():
-	button = tk.Button(root, text='based_on_persons', width=25,command=a)
-	button.place(x=400,y=100)
 
+	button = tk.Button(root, text='based_on_persons', width=25,command=a)
+	button.place(x=650,y=130)
+	#button.pack(pady=30)
 	button = tk.Button(root, text='based_on_area', width=25,command= c)
-	button.place(x=400,y=130)
+	button.place(x=650,y=150)
+	#button.pack(pady=30)
 
 def a():
 	#fig = matplotlib.pyplot.Figure()
@@ -106,7 +112,7 @@ def a():
 	rects1 = ax.bar(ind , data1 , width)
 	canvas = FigureCanvasTkAgg(f, master=root)
 	canvas.show()
-	canvas.get_tk_widget().place(x=350,y=200)
+	canvas.get_tk_widget().place(x=350,y=250)
 
 def c():
 	f = Figure(figsize=(5,4), dpi=100)
@@ -124,22 +130,22 @@ def c():
 	rects1 = ax.bar(ind, data1, width)
 	canvas = FigureCanvasTkAgg(f, master=root)
 	canvas.show()
-	canvas.get_tk_widget().place(x=350,y=200)
+	canvas.get_tk_widget().place(x=350,y=250)
 
 
 def a1():
-    w=tk.Label(root,text="Name : sample_Person_1 ")
-    w1=tk.Label(root,text="Age : 38 ")
-    w2=tk.Label(root,text="Location : Western ")
-    w3=tk.Label(root,text="helmet id : 1532 ")
-    w4=tk.Label(root,text="Air Quality level : 1023 ")
-    w5=tk.Label(root,text="CV status : no problem ")
-    w.place(x=500,y=100)
-    w1.place(x=500,y=130)
-    w3.place(x=500,y=160)
-    w2.place(x=500,y=190)
-    w4.place(x=500,y=220)
-    w5.place(x=500,y=250)
+	w=tk.Label(root,text="Name : sample_Person_1 ")
+	w1=tk.Label(root,text="Age : 38 ")
+	w2=tk.Label(root,text="Location : Western ")
+	w3=tk.Label(root,text="helmet id : 1532 ")
+	w4=tk.Label(root,text="Air Quality level : 1023 ")
+	w5=tk.Label(root,text="CV status : no problem ")
+	w.place(x=50,y=310)
+	w1.place(x=50,y=340)
+	w3.place(x=50,y=370)
+	w2.place(x=50,y=400)
+	w4.place(x=50,y=430)
+	w5.place(x=50,y=460)
 def a2():
     w=tk.Label(root,text="Name : sample_Person_2 ")
     w1=tk.Label(root,text="Age : 21 ")
@@ -147,12 +153,12 @@ def a2():
     w3=tk.Label(root,text="helmet id : 1533 ")
     w4=tk.Label(root,text="Air Quality level : 1536 ")
     w5=tk.Label(root,text="CV status : no problem ")
-    w.place(x=500,y=100)
-    w1.place(x=500,y=130)
-    w3.place(x=500,y=160)
-    w2.place(x=500,y=190)
-    w4.place(x=500,y=220)
-    w5.place(x=500,y=250)
+    w.place(x=50,y=310)
+    w1.place(x=50,y=340)
+    w3.place(x=50,y=370)
+    w2.place(x=50,y=400)
+    w4.place(x=50,y=430)
+    w5.place(x=50,y=460)
 
 def a3():
     w=tk.Label(root,text="Name : sample_Person_3 ")
@@ -161,12 +167,12 @@ def a3():
     w3=tk.Label(root,text="helmet id : 1534 ")
     w4=tk.Label(root,text="Air Quality level : 1023 ")
     w5=tk.Label(root,text="CV status : no problem ")
-    w.place(x=500,y=100)
-    w1.place(x=500,y=130)
-    w3.place(x=500,y=160)
-    w2.place(x=500,y=190)
-    w4.place(x=500,y=220)
-    w5.place(x=500,y=250)
+    w.place(x=50,y=310)
+    w1.place(x=50,y=340)
+    w3.place(x=50,y=370)
+    w2.place(x=50,y=400)
+    w4.place(x=50,y=430)
+    w5.place(x=50,y=460)
 
 def a4():
     w=tk.Label(root,text="Name : sample_Person_4 ")
@@ -175,12 +181,12 @@ def a4():
     w3=tk.Label(root,text="helmet id : 1535 ")
     w4=tk.Label(root,text="Air Quality level : 3223 ")
     w5=tk.Label(root,text="CV status : no problem ")
-    w.place(x=500,y=100)
-    w1.place(x=500,y=130)
-    w3.place(x=500,y=160)
-    w2.place(x=500,y=190)
-    w4.place(x=500,y=220)
-    w5.place(x=500,y=250)
+    w.place(x=50,y=310)
+    w1.place(x=50,y=340)
+    w3.place(x=50,y=370)
+    w2.place(x=50,y=400)
+    w4.place(x=50,y=430)
+    w5.place(x=50,y=460)
 
 def a5():
     w=tk.Label(root,text="Name : sample_Person_5 ")
@@ -189,12 +195,12 @@ def a5():
     w3=tk.Label(root,text="helmet id : 1536 ")
     w4=tk.Label(root,text="Air Quality level : 9073 ")
     w5=tk.Label(root,text="CV status : no problem ")
-    w.place(x=500,y=100)
-    w1.place(x=500,y=130)
-    w3.place(x=500,y=160)
-    w2.place(x=500,y=190)
-    w4.place(x=500,y=220)
-    w5.place(x=500,y=250)
+    w.place(x=50,y=310)
+    w1.place(x=50,y=340)
+    w3.place(x=50,y=370)
+    w2.place(x=50,y=400)
+    w4.place(x=50,y=430)
+    w5.place(x=50,y=460)
 
 def a6():
     w=tk.Label(root,text="Name : sample_Person_7 ")
@@ -282,26 +288,29 @@ button.place(y=220,x=50)
 button = tk.Button(root, text='sample_person_5', width=25, command=a5)
 button.place(y=260,x=50)
 
-button = tk.Button(root, text='sample_person_6', width=25, command=a10)
-button.place(y=300,x=50)
+#button = tk.Button(root, text='sample_person_6', width=25, command=a10)
+#button.place(y=300,x=50)
 
-button = tk.Button(root, text='sample_person_7', width=25, command=a6)
-button.place(y=340,x=50)
+#button = tk.Button(root, text='sample_person_7', width=25, command=a6)
+#button.place(y=340,x=50)
 
-button = tk.Button(root, text='sample_person_8', width=25, command=a7)
-button.place(y=380,x=50)
+#button = tk.Button(root, text='sample_person_8', width=25, command=a7)
+#button.place(y=380,x=50)
 
-button = tk.Button(root, text='sample_person_9', width=25, command=a8)
-button.place(y=420,x=50)
+#button = tk.Button(root, text='sample_person_9', width=25, command=a8)
+#button.place(y=420,x=50)
 
-button = tk.Button(root, text='sample_person_10', width=25, command=a9)
-button.place(y=460,x=50)
+#button = tk.Button(root, text='sample_person_10', width=25, command=a9)
+#button.place(y=460,x=50)
 
 button = tk.Button(root, text='Air quality detection', width=25,command = b)
 button.place(y=520,x=50)
 
 button = tk.Button(root, text='checking cv status', width=25,command = d)
 button.place(y=550,x=50)
+
+button = tk.Button(root, text='video detection', width=25,command = v)
+button.place(y=600,x=50)
 
 
 w=tk.Label(root,text="Workers at coal mines")
