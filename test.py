@@ -1,4 +1,4 @@
-import Tkinter as tk
+import tkinter as tk
 import matplotlib, numpy, sys
 matplotlib.use('TkAgg')
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
